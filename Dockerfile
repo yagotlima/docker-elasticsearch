@@ -12,6 +12,8 @@ RUN wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-$
 
 WORKDIR /opt/elasticsearch
 
+VOLUME /opt/elasticsearch/data
+
 ENV JAVA_OPTS="-server"
 
 ENTRYPOINT [ "/opt/elasticsearch/bin/elasticsearch" ]
